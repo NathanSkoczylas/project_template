@@ -14,13 +14,14 @@ set(CODE_DIR ${PROJECT_SOURCE_DIR})
 message (" Project Name: ${PROJECT_NAME} \n Root Directory: ${CODE_DIR}")
 message ("****************************************")
 
-# Set sources for bored engine
+# Set sources for project
 set(projectSOURCES
 	project.cpp
 	
 	ClassObject.cpp
 )
 
+# Set headers for project
 set(projectHEADERS
 	ClassObject.hpp
 )
@@ -29,6 +30,11 @@ set(projectHEADERS
 add_executable(${PROJECT_NAME} 
 	${projectSOURCES}
 	${projectHEADERS}
+)
+
+# Link libraries
+target_link_libraries(${PROJECT_NAME} 
+	
 )
 
 # Set the install directory for the executable
